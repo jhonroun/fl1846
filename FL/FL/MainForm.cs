@@ -56,7 +56,9 @@ namespace FL
 				       {
 							XmlSerializer serializer = new XmlSerializer(typeof(iniSettings));
 							iniSettings ini=(iniSettings)serializer.Deserialize(writer);
-							this.Location=new Point(ini.Position_x,ini.Position_y);;
+							this.StartPosition=FormStartPosition.Manual;
+							this.Left=ini.Position_x;
+							this.Top=ini.Position_y;							
 							this.Width=ini.Width;
 							this.Height=ini.Height;
 							this.TopMost=true;

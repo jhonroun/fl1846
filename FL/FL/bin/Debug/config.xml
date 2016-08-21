@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <iniSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Position_x>100</Position_x>
-  <Position_y>100</Position_y>
-  <Width>100</Width>
-  <Height>100</Height>
+  <Position_x>350</Position_x>
+  <Position_y>200</Position_y>
+  <Width>300</Width>
+  <Height>600</Height>
   <Color>#231512</Color>
 </iniSettings>
