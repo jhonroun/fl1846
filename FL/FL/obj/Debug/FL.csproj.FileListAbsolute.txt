@@ -4,3 +4,9 @@ C:\Users\Снежана\Documents\SharpDevelop Projects\FL\FL\bin\Debug\FL.exe
 C:\Users\Снежана\Documents\SharpDevelop Projects\FL\FL\bin\Debug\FL.pdb
 C:\Users\Снежана\Documents\SharpDevelop Projects\FL\FL\obj\Debug\FL.exe
 C:\Users\Снежана\Documents\SharpDevelop Projects\FL\FL\obj\Debug\FL.pdb
+C:\Users\Владимир\Downloads\fl1846-master\FL\FL\bin\Debug\FL.exe.config
+C:\Users\Владимир\Downloads\fl1846-master\FL\FL\obj\Debug\FL.exe
+C:\Users\Владимир\Downloads\fl1846-master\FL\FL\obj\Debug\FL.pdb
+C:\Users\Владимир\Downloads\fl1846-master\FL\FL\bin\Debug\FL.exe
+C:\Users\Владимир\Downloads\fl1846-master\FL\FL\bin\Debug\FL.pdb
+C:\Users\Владимир\Downloads\fl1846-master\FL\FL\obj\Debug\FL.csprojResolveAssemblyReference.cache

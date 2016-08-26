@@ -11,6 +11,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
 using System.Xml.Serialization;
+using System.Diagnostics;
 
 namespace FL
 {
@@ -21,7 +22,7 @@ namespace FL
 		public MainForm(string[] Args)
 		{
 			InitializeComponent();
-			string configPath=getPath();
+            string configPath=getPath();
 			if (File.Exists(configPath))
 				ReadSettings();
 			else
@@ -63,6 +64,7 @@ namespace FL
 							this.Height=ini.Height;
 							this.TopMost=true;
 							this.Text="";
+                            this.ShowInTaskbar = false;
 							this.BackColor=ColorTranslator.FromHtml(ini.Color);
 							this.FormBorderStyle=FormBorderStyle.None;
 				       }
@@ -78,6 +80,7 @@ namespace FL
 				FileInfo f = new FileInfo(Application.ExecutablePath);
 				return string.Format(@"{0}\{1}",f.DirectoryName,"config.xml");
 			}
+            
 	}
 		
 		public class iniSettings
@@ -88,5 +91,6 @@ namespace FL
 			public int Height;
 			public string Color;
 		}
-	}
+	
+}
 

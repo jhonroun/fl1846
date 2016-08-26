@@ -8,6 +8,9 @@
  */
 using System;
 using System.Windows.Forms;
+using System.Threading;
+using System.Diagnostics;
+using System.Reflection;
 
 namespace FL
 {
@@ -24,7 +27,33 @@ namespace FL
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new MainForm(args));
+            using (var mutex = new Mutex(false, "fl"))
+            {
+                if (mutex.WaitOne(TimeSpan.FromSeconds(3))) 
+                    Application.Run(new MainForm(args));
+                else
+                {
+                   int argsLength = args.Length;
+                   if (argsLength != 0)
+                   {
+                       if (args[argsLength - 1] == "-exit")
+                       {
+                           Process current = Process.GetCurrentProcess();
+                           Process[] pr = Process.GetProcessesByName(current.ProcessName);
+                           foreach (Process i in pr)
+                           {
+                               if (i.Id != current.Id)
+                               {
+                                   if (Assembly.GetExecutingAssembly().Location.Replace("/", "\\") == current.MainModule.FileName)
+                                   {
+                                       i.Kill();
+                                   }
+                               }
+                           }
+                       }
+                   }
+                }
+            }
 		}
 		
 	}
